@@ -34,8 +34,8 @@ promoRouter.route('/:promoId')
     res.end('PUT operation not supported on /promotions/' + req.params.promoId);
   })
   .put((req, res, next) => {
-    res.write('Updating promo: ' + req.params.promoId);
-    res.end(' Will update the promo' + req.body.name + ' with details: ' + req.body.description);
+    res.write('Updating promo: ' + req.params.promoId + '\n');
+    res.end(' Will update the promo ' + req.body.name + ' with details: ' + req.body.description);
   })
   .delete((req, res, next) => {
     res.end('Deleting promo: ' + req.params.promoId)

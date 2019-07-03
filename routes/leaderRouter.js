@@ -34,8 +34,8 @@ leaderRouter.route('/:leaderId')
     res.end('PUT operation not supported on /leaders/' + req.params.leaderId);
   })
   .put((req, res, next) => {
-    res.write('Updating leader: ' + req.params.leaderId);
-    res.end(' Will update the leader' + req.body.name + ' with details: ' + req.body.description);
+    res.write('Updating leader: ' + req.params.leaderId + '\n');
+    res.end(' Will update the leader ' + req.body.name + ' with details: ' + req.body.description);
   })
   .delete((req, res, next) => {
     res.end('Deleting leader: ' + req.params.leaderId)
