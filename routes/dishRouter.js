@@ -51,6 +51,11 @@ dishRouter.route('/')
       .catch((err) => next(err))
   })
 
+
+//  === === === === === === === === === ===
+//                /:dishId
+//  === === === === === === === === === ===
+
 dishRouter.route('/:dishId')
   .get((req, res, next) => {
     // res.end('Will send detailsss of the dish: ' + req.params.dishId + ' to you!');
@@ -264,4 +269,6 @@ dishRouter.route('/:dishId/comments/:commentId')
 // go to postman an make some request
 // localhost:3000/dishes/5d2bf51dcb221417b0376891/comments/5d3a31723747260c2022ec51
 // first we need to post a entire dish, then PUT or update by adding a new comment, GET the comment above copy and paste the specigic id
+// and PUT or update again  the prevously created comment
+// ypu can DELETE a specific comment, or all the comments
 module.exports = dishRouter;
