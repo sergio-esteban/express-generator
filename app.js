@@ -52,7 +52,7 @@ function auth(req, res, next) {
     var authHeader = req.headers.authorization;
 
     if (!authHeader) {
-      var err = new Error('Dude You are not Authenticated!');
+      var err = new Error('Hey Dude You are not Authenticated!');
       res.setHeader('WWW-Authenticate', 'Basic');
       err.status = 401;
       next(err);
