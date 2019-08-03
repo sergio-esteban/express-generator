@@ -75,7 +75,7 @@ function auth(req, res, next) {
       // from the auth, this request will passed on the next set of middleware
       // then Express will try to match the specific request to were
     } else {
-      var err = new Error('You are not authenticated!');
+      var err = new Error('You are not authenticated yet!');
       res.setHeader('WWW-Authenticate', 'Basic');
       err.status = 401;
       next(err);
